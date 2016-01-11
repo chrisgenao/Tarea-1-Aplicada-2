@@ -13,7 +13,7 @@ namespace DAL
     /// </summary>
     public class ConexionDb
     {
-        SqlConnection Conexion = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=CentroBiblicoCharisDB;Integrated Security=True");
+        SqlConnection Conexion = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=Tarea1;Integrated Security=True");
 
         /// <summary>
         /// Ejecutar comandos a la base de datos, recuerde pasar solo los comandos que no retornan algun valor

@@ -15,7 +15,7 @@ namespace BLL
 
         public int CuentaId { get; set; }
         public string Descripcion { get; set; }
-        public float Balance { get; set; }
+        public double Balance { get; set; }
 
         public Cuentas()
         {
@@ -73,7 +73,7 @@ namespace BLL
 
                 this.CuentaId = IdBuscado;
                 this.Descripcion = (string)dt.Rows[0]["Descrpcion"];
-                this.Balance = (float)dt.Rows[0]["Balance"];
+                this.Balance = (double)dt.Rows[0]["Balance"];
             }
 
             return Encontro;

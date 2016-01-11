@@ -31,13 +31,13 @@ namespace Tarea_1.GUI {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// CuentaTextBox control.
+        /// IDCuentaTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CuentaTextBox;
+        protected global::System.Web.UI.WebControls.TextBox IDCuentaTextBox;
         
         /// <summary>
         /// BuscarButton control.
@@ -85,6 +85,15 @@ namespace Tarea_1.GUI {
         protected global::System.Web.UI.WebControls.TextBox BalanceTextBox;
         
         /// <summary>
+        /// LimpiarButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LimpiarButton;
+        
+        /// <summary>
         /// EnviarButton control.
         /// </summary>
         /// <remarks>
@@ -92,5 +101,14 @@ namespace Tarea_1.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button EnviarButton;
+        
+        /// <summary>
+        /// EliminarButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button EliminarButton;
     }
 }

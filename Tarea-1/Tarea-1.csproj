@@ -99,6 +99,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Common\main.css" />
+    <Content Include="GUI\cCuentas.aspx" />
+    <Content Include="GUI\rCuentas.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -118,7 +121,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GUI\default.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
@@ -215,12 +217,19 @@
     <Compile Include="BLL\Cuentas.cs" />
     <Compile Include="Common\Utilitarios.cs" />
     <Compile Include="DAL\ConexionDb.cs" />
-    <Compile Include="GUI\default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="GUI\cCuentas.aspx.cs">
+      <DependentUpon>cCuentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="GUI\cCuentas.aspx.designer.cs">
+      <DependentUpon>cCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\rCuentas.aspx.cs">
+      <DependentUpon>rCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\rCuentas.aspx.designer.cs">
+      <DependentUpon>rCuentas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

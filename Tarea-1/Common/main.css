@@ -1,0 +1,19 @@
+﻿@import url('main.css');
+body {
+   
+}
+.quitar-float{
+    float: none;
+}
+
+.espacio-arriba{
+    margin-top: 100px;
+    text-align: justify;
+}
+.pacifico{
+     font-family: 'Pacifico', cursive;
+}
+
+.grande{
+    font-size: 3em;
+}

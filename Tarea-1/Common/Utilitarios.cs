@@ -29,7 +29,7 @@ namespace Tarea_1.Common
             }
 
             return valido;
-        }
 
+        }
     }
 }
