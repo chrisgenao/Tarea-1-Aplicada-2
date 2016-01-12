@@ -40,7 +40,7 @@ namespace Tarea_1.GUI
 
             Cuenta.CuentaId = Utilitarios.ToInt(IDCuentaTextBox.ToString());
             Cuenta.Descripcion = DescripcionTextBox.Text;
-            Cuenta.Balance = Convert.ToDouble(BalanceTextBox.ToString());
+       //     Cuenta.Balance = Convert.ToDouble(BalanceTextBox.ToString());
 
             if (Cuenta.CuentaId > 0)
             {

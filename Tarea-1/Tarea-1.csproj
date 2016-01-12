@@ -214,9 +214,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Cuentas.cs" />
     <Compile Include="Common\Utilitarios.cs" />
-    <Compile Include="DAL\ConexionDb.cs" />
     <Compile Include="GUI\cCuentas.aspx.cs">
       <DependentUpon>cCuentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,7 +231,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{424d3b8b-1af4-40d4-bae3-3757708be257}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

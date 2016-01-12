@@ -14,7 +14,7 @@
     <script src="../scripts/jquery-2.2.0.min.js"></script>
     <form id="form1" class="" runat="server">
     
-        <div classstyle="height: 20px">
+        <div>
     
         <asp:Label ID="Label1" runat="server" Text="ID Cuenta: "></asp:Label>
     
