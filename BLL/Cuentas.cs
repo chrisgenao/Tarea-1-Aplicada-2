@@ -15,7 +15,7 @@ namespace BLL
 
         public int CuentaId { get; set; }
         public string Descripcion { get; set; }
-        public double Balance { get; set; }
+        public float Balance { get; set; }
 
         public Cuentas()
         {
@@ -65,15 +65,15 @@ namespace BLL
             bool Encontro = false;
             DataTable dt = new DataTable();
 
-            dt = this.Listar("Descripcion, Balance", "CuentaId=" + IdBuscado);
+            dt = this.Listar("Descripcion, Balance", "CuentaId =" + IdBuscado);
 
             if (dt.Rows.Count > 0)
             {
                 Encontro = true;
 
                 this.CuentaId = IdBuscado;
-                this.Descripcion = (string)dt.Rows[0]["Descrpcion"];
-                this.Balance = (double)dt.Rows[0]["Balance"];
+                this.Descripcion = (string)dt.Rows[0]["Descripcion"];
+                this.Balance = (float)dt.Rows[0]["Balance"];
             }
 
             return Encontro;

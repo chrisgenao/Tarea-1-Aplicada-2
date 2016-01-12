@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
 using Tarea_1.Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tarea_1.GUI
 {
@@ -27,38 +28,38 @@ namespace Tarea_1.GUI
         {
             Boolean paso = false;
 
-            if (IDCuentaTextBox.Text.Trim().Length == 0)
-            {
-            }
-
             if (DescripcionTextBox.Text.Trim().Length == 0)
             {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Debe ingresar una descripcion.');", true);
             }
             if (BalanceTextBox.Text.Trim().Length == 0)
             {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Debe ingresar un balance.');", true);
             }
+            else {
 
-            Cuenta.CuentaId = Utilitarios.ToInt(IDCuentaTextBox.ToString());
-            Cuenta.Descripcion = DescripcionTextBox.Text;
-       //     Cuenta.Balance = Convert.ToDouble(BalanceTextBox.ToString());
+                Cuenta.CuentaId = Utilitarios.ToInt(IDCuentaTextBox.ToString());
+                Cuenta.Descripcion = DescripcionTextBox.Text;
+                Cuenta.Balance = float.Parse(BalanceTextBox.Text);
 
-            if (Cuenta.CuentaId > 0)
-            {
-                //Editando
-                paso = Cuenta.Modificar();
-            }
-            else
-            {
-                //Insertando
-                paso = Cuenta.Insertar();
-            }
-            if (paso)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registrado Satisfactoriamente.');", true);
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Ha habido un error.');", true);
+                if (Cuenta.CuentaId > 0)
+                {
+                    //Editando
+                    paso = Cuenta.Modificar();
+                }
+                else
+                {
+                    //Insertando
+                    paso = Cuenta.Insertar();
+                }
+                if (paso)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registrado Satisfactoriamente.');", true);
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Ha habido un error.');", true);
+                }
             }
         }
 
@@ -70,12 +71,31 @@ namespace Tarea_1.GUI
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-       
+            if (IDCuentaTextBox.Text.Trim().Length == 0)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Ha habido un error. Pruebe ingresando un ID.');", true);
+            }
+            if (Cuenta.Eliminar(Utilitarios.ToInt(IDCuentaTextBox.Text)))
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Cuenta Eliminada.');", true);
         }
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GUI/cCuentas.aspx");
+            int Id;
+            if (IDCuentaTextBox.Text == "")
+            {
+                Response.Redirect("~/GUI/cCuentas.aspx");
+            }
+            else
+            {
+                Id = int.Parse(IDCuentaTextBox.Text);
+                Cuenta.Buscar(Id);
+                Cuenta.Descripcion = DescripcionTextBox.Text;
+                float flotante = Cuenta.Balance;
+                BalanceTextBox.Text = flotante.ToString();
+            }
+            
+
         }
     }
 }

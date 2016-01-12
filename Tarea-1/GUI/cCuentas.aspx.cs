@@ -61,7 +61,8 @@ namespace Tarea_1.GUI
                 }
 
             dt = Cuenta.Listar("CuentaId, Descripcion, Balance", filtro);
-            GridView1.DataSource = dt;
+            BuscarGridView.DataSource = dt;
+            BuscarGridView.DataBind();
 
         }
     }
