@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cCuentas.aspx.cs" Inherits="Tarea_1.GUI.cCuentas" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cCuentas.aspx.cs" Inherits="Tarea_1.GUI.cCuentas" EnableEventValidation = "false" %>
 
 <!DOCTYPE html>
 
@@ -34,8 +34,8 @@
                 </div>
         </div>
         </nav>
-    <form id="form1" runat="server">
-    <div style="margin-left: 40px">
+    <form class="centro" id="form1" runat="server">
+    <div class="centro" style="margin-left: 40px">
     
         <asp:Label ID="Label1" runat="server" Text="Buscar Por: "></asp:Label>
         <asp:DropDownList ID="FiltroDropDown" runat="server">
@@ -47,7 +47,7 @@
         <asp:TextBox ID="FiltroTextBox" runat="server" Width="313px"></asp:TextBox>
         <asp:Button ID="BuscarButton" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
         <br />
-        <asp:GridView ID="BuscarGridView" runat="server" Width="572px">
+        <asp:GridView ID="BuscarGridView" runat="server" Width="572px" OnRowDataBound="OnRowDataBound" OnSelectedIndexChanged="OnSelectedIndexChanged">
         </asp:GridView>
         <br />
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GUI/rCuentas.aspx">Atras</asp:HyperLink>

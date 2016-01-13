@@ -17,3 +17,12 @@ body {
 .grande{
     font-size: 3em;
 }
+
+.centro{
+	width:395px;
+	height:146px;
+	position:absolute;
+	left:50%;
+	top:51%;
+	margin:-75px 0 0 -135px;
+}
